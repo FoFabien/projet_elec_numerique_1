@@ -1,0 +1,183 @@
+Release 8.2.03i - xst I.34
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 3.34 s | Elapsed : 0.00 / 3.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 3.34 s | Elapsed : 0.00 / 3.00 s
+ 
+--> Reading design: encodeur.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "encodeur.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "encodeur"
+Output Format                      : NGC
+Target Device                      : XC9500 CPLDs
+
+---- Source Options
+Top Module Name                    : encodeur
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : YES
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+
+---- Other Options
+lso                                : encodeur.lso
+verilog2001                        : YES
+safe_implementation                : No
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3215 - Unit work/encodeur is now defined in a different file: was H:/tp_numerique/projet_elec_numerique_1/vhdl.vhd, now is //narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+WARNING:HDLParsers:3215 - Unit work/encodeur/codage is now defined in a different file: was H:/tp_numerique/projet_elec_numerique_1/vhdl.vhd, now is //narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+Compiling vhdl file "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd" is newer than current system time.
+Architecture codage of Entity encodeur is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <encodeur> in library <work> (architecture <codage>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <encodeur> in library <work> (Architecture <codage>).
+Entity <encodeur> analyzed. Unit <encodeur> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <encodeur>.
+    Related source file is "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd".
+WARNING:Xst:737 - Found 4-bit latch for signal <code_touche>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+Unit <encodeur> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 4-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Latches                                              : 1
+ 4-bit latch                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <encodeur> ...
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : encodeur.ngr
+Top Level Output File Name         : encodeur
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : XC9500 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 301
+#      AND2                        : 90
+#      AND3                        : 2
+#      INV                         : 134
+#      OR2                         : 59
+#      OR3                         : 16
+# FlipFlops/Latches                : 4
+#      LD                          : 4
+# IO Buffers                       : 21
+#      IBUF                        : 16
+#      OBUF                        : 5
+=========================================================================
+CPU : 6.11 / 9.55 s | Elapsed : 7.00 / 10.00 s
+ 
+--> 
+
+Total memory usage is 111844 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,104 @@
+# Reading C:/Modeltech_6.2e/tcl/vsim/pref.tcl 
+# //  ModelSim SE 6.2e Nov 16 2006 
+# //
+# //  Copyright 2006 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {telecommande.tdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE vcom 6.2e Compiler 2006.11 Nov 16 2006
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package vital_timing
+# -- Loading package vcomponents
+# -- Loading package vital_primitives
+# -- Loading package textio
+# -- Loading package vpackage
+# -- Compiling entity telecommande
+# -- Compiling architecture structure of telecommande
+# vsim -lib work -sdfmax /telecommande=netgen/fit/telecommande_timesim.sdf -t 1ps telecommande 
+# ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
+# File in use by: fforest  Hostname: GROIX  ProcessID: 4080
+#           Attempting to use alternate file "./wlftj3ebf0".
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftj3ebf0 instead.
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftj3ebf0 instead.
+# Design is being optimized due to module recompilation...
+# Loading C:\Modeltech_6.2e\win32/../std.standard
+# Loading C:\Modeltech_6.2e\win32/../ieee.std_logic_1164(body)
+# Loading C:\Modeltech_6.2e\win32/../std.textio(body)
+# Loading C:\Modeltech_6.2e\win32/../vital2000.vital_timing(body)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.vcomponents
+# Loading C:\Modeltech_6.2e\win32/../vital2000.vital_primitives(body)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.vpackage(body)
+# Loading work.telecommande(structure)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_buf(x_buf_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or2(x_or2_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_zero(x_zero_v)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_ff(x_ff_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_one(x_one_v)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_xor2(x_xor2_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and2(x_and2_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and32(x_and32_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and3(x_and3_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or7(x_or7_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and16(x_and16_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or3(x_or3_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and4(x_and4_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or4(x_or4_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and5(x_and5_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and6(x_and6_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or6(x_or6_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and7(x_and7_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and8(x_and8_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or5(x_or5_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_inv(x_inv_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_roc(x_roc_v)
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Region: /telecommande  File: netgen/fit/telecommande_timesim.vhd
+# .main_pane.mdi.interior.cs.vm.paneset.cli_0.wf.clip.cs.pw.wf
+# .main_pane.workspace.interior.cs.nb.canvas.notebook.cs.page2.cs
+# .main_pane.signals.interior.cs
+do com_final.cmd
+# ** Warning: (vsim-WLF-5000) Log file vsim.wlf currently in use.
+# File in use by: fforest  Hostname: GROIX  ProcessID: 4080
+#           Attempting to use alternate file "./wlftmgd506".
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftmgd506 instead.
+# ** Warning: (vsim-WLF-5001) Could not open log file vsim.wlf.  Using ./wlftmgd506 instead.
+# Design is being optimized due to module recompilation...
+# Loading C:\Modeltech_6.2e\win32/../std.standard
+# Loading C:\Modeltech_6.2e\win32/../ieee.std_logic_1164(body)
+# Loading C:\Modeltech_6.2e\win32/../std.textio(body)
+# Loading C:\Modeltech_6.2e\win32/../vital2000.vital_timing(body)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.vcomponents
+# Loading C:\Modeltech_6.2e\win32/../vital2000.vital_primitives(body)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.vpackage(body)
+# Loading work.telecommande(structure)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_buf(x_buf_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or2(x_or2_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_zero(x_zero_v)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_ff(x_ff_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_one(x_one_v)
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_xor2(x_xor2_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and2(x_and2_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and32(x_and32_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and3(x_and3_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or7(x_or7_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and16(x_and16_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or3(x_or3_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and4(x_and4_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or4(x_or4_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and5(x_and5_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and6(x_and6_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or6(x_or6_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and7(x_and7_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_and8(x_and8_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_or5(x_or5_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_inv(x_inv_v)#1
+# Loading C:/Xilinx/vhdl/mti_se/simprim.x_roc(x_roc_v)
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Region: /telecommande  File: netgen/fit/telecommande_timesim.vhd

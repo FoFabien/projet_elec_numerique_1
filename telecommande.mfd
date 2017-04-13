@@ -1,0 +1,1060 @@
+MDF Database:  version 1.0
+MDF_INFO | telecommande | XC9572-7-PC44
+MACROCELL | 1 | 9 | U2/etatP<0>
+ATTRIBUTES | 8618768 | 0
+OUTPUTMC | 15 | 3 | 12 | 3 | 11 | 3 | 13 | 3 | 14 | 1 | 8 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 3 | 1 | 4
+INPUTS | 3 | U2/etatF_FFd2  | U2/etatF_FFd3  | R
+INPUTMC | 2 | 3 | 5 | 3 | 2
+INPUTP | 1 | 31
+EQ | 4 | 
+   U2/etatP<0>.D = U2/etatF_FFd2
+	$ U2/etatF_FFd3;
+   U2/etatP<0>.CLK = H;	// GCK
+   U2/etatP<0>.AR = R;
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 3 | 7 | U2/etatP<1>
+ATTRIBUTES | 8618768 | 0
+OUTPUTMC | 12 | 1 | 8 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 3 | 3 | 13 | 3 | 14
+INPUTS | 4 | U2/etatF_FFd2.LFBK  | U2/etatF_FFd3.LFBK  | R  | U2/etatF_FFd1.LFBK
+INPUTMC | 3 | 3 | 5 | 3 | 2 | 3 | 8
+INPUTP | 1 | 31
+EQ | 4 | 
+   U2/etatP<1>.D = U2/etatF_FFd1.LFBK
+	# U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK;
+   U2/etatP<1>.CLK = H;	// GCK
+   U2/etatP<1>.AR = R;
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 7 | U2/etatP<2>
+ATTRIBUTES | 8618768 | 0
+OUTPUTMC | 13 | 3 | 13 | 3 | 14 | 1 | 8 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 3 | 1 | 4
+INPUTS | 3 | U2/etatF_FFd2  | U2/etatF_FFd3  | R
+INPUTMC | 2 | 3 | 5 | 3 | 2
+INPUTP | 1 | 31
+EQ | 3 | 
+   U2/etatP<2>.D = U2/etatF_FFd2 & U2/etatF_FFd3;
+   U2/etatP<2>.CLK = H;	// GCK
+   U2/etatP<2>.AR = R;
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 3 | 5 | U2/etatF_FFd2
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 11 | 1 | 9 | 1 | 7 | 3 | 4 | 3 | 7 | 3 | 2 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 0 | 3 | 1 | 3 | 3
+INPUTS | 7 | U2/T<0>.LFBK  | demi_T  | U2/T<1>.LFBK  | E<1>  | E<12>  | E<14>  | U2/etatF_FFd3.LFBK
+INPUTMC | 4 | 3 | 10 | 1 | 8 | 3 | 9 | 3 | 2
+INPUTP | 3 | 10 | 50 | 58
+EXPORTS | 1 | 3 | 4
+EQ | 4 | 
+   U2/etatF_FFd2.T = demi_T & U2/etatF_FFd3.LFBK & U2/T<0>.LFBK & 
+	U2/T<1>.LFBK;
+   U2/etatF_FFd2.CLK = H;	// GCK
+    U2/etatF_FFd2.EXP  =  E<1> & E<12> & E<14> & !U2/T<1>.LFBK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 3 | 2 | U2/etatF_FFd3
+ATTRIBUTES | 8618752 | 0
+OUTPUTMC | 11 | 1 | 9 | 1 | 7 | 3 | 7 | 3 | 5 | 3 | 2 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 0 | 3 | 1 | 3 | 3
+INPUTS | 21 | U2/etatF_FFd2.LFBK  | demi_T  | U2/T<0>.LFBK  | U2/T<1>.LFBK  | U2/etatF_FFd1.LFBK  | E<4>  | E<0>  | E<8>  | E<10>  | E<5>  | E<13>  | E<12>  | E<11>  | E<6>  | E<14>  | E<9>  | E<15>  | $OpTx$FX_DC$74  | EXP6_.EXP  | EXP7_.EXP  | U2/etatF_FFd3.LFBK
+INPUTMC | 9 | 3 | 5 | 1 | 8 | 3 | 10 | 3 | 9 | 3 | 8 | 1 | 14 | 3 | 1 | 3 | 3 | 3 | 2
+INPUTP | 12 | 13 | 9 | 29 | 49 | 15 | 52 | 50 | 46 | 26 | 58 | 38 | 61
+IMPORTS | 2 | 3 | 1 | 3 | 3
+EQ | 89 | 
+   U2/etatF_FFd3.D = !demi_T & U2/etatF_FFd3.LFBK
+	# demi_T & U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# !U2/etatF_FFd2.LFBK & U2/etatF_FFd3.LFBK & 
+	!U2/T<0>.LFBK
+	# !U2/etatF_FFd2.LFBK & U2/etatF_FFd3.LFBK & 
+	!U2/T<1>.LFBK
+	# E<4> & E<0> & E<8> & E<10> & E<5> & E<13> & 
+	E<12> & E<11> & E<6> & E<14> & E<9> & E<15> & 
+	$OpTx$FX_DC$74 & !U2/etatF_FFd1.LFBK & !U2/etatF_FFd2.LFBK & 
+	!U2/etatF_FFd3.LFBK
+;Imported pterms FB4_2
+	# E<1> & E<2> & E<10> & E<5> & E<13> & E<3> & 
+	E<11> & E<6> & E<14> & E<9> & E<15> & E<7> & 
+	$OpTx$FX_DC$75 & !U2/etatF_FFd1.LFBK & !U2/etatF_FFd2.LFBK & 
+	!U2/etatF_FFd3.LFBK
+	# E<4> & E<0> & E<8> & E<10> & E<5> & E<13> & 
+	E<12> & E<11> & E<6> & E<14> & E<9> & E<15> & demi_T & 
+	$OpTx$FX_DC$74 & U2/etatF_FFd1.LFBK & U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<1> & E<2> & E<10> & E<5> & E<13> & E<3> & 
+	E<11> & E<6> & E<14> & E<9> & E<15> & E<7> & demi_T & 
+	$OpTx$FX_DC$75 & U2/etatF_FFd1.LFBK & U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	!E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & !E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+;Imported pterms FB4_1
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	!E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & !E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & !E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	!E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & !E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+;Imported pterms FB4_4
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & !E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & !E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & !E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & !E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & !E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+;Imported pterms FB4_5
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	!E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & !E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & !E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & !E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK;
+   U2/etatF_FFd3.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 8 | demi_T
+ATTRIBUTES | 8618752 | 0
+OUTPUTMC | 9 | 3 | 5 | 3 | 2 | 3 | 4 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 0 | 3 | 1 | 1 | 8
+INPUTS | 12 | demi_T.LFBK  | U0/AUX<0>.LFBK  | U0/AUX<1>.LFBK  | U0/AUX<2>.LFBK  | U0/AUX<3>.LFBK  | U0/AUX<4>.LFBK  | U0/AUX<5>.LFBK  | U0/AUX<6>.LFBK  | U0/AUX<7>.LFBK  | U2/etatP<2>.LFBK  | U2/etatP<1>  | U2/etatP<0>.LFBK
+INPUTMC | 12 | 1 | 8 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 7 | 3 | 7 | 1 | 9
+EQ | 10 | 
+   demi_T.D = U2/etatP<1> & !demi_T.LFBK & U0/AUX<0>.LFBK & 
+	U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & !U0/AUX<3>.LFBK & !U0/AUX<4>.LFBK & 
+	!U0/AUX<5>.LFBK & U0/AUX<6>.LFBK & U0/AUX<7>.LFBK
+	# U2/etatP<0>.LFBK & !demi_T.LFBK & U0/AUX<0>.LFBK & 
+	U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & !U0/AUX<3>.LFBK & !U0/AUX<4>.LFBK & 
+	!U0/AUX<5>.LFBK & U0/AUX<6>.LFBK & U0/AUX<7>.LFBK
+	# !demi_T.LFBK & U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & 
+	U0/AUX<2>.LFBK & !U0/AUX<3>.LFBK & !U0/AUX<4>.LFBK & !U0/AUX<5>.LFBK & 
+	U0/AUX<6>.LFBK & U0/AUX<7>.LFBK & U2/etatP<2>.LFBK;
+   demi_T.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 3 | 10 | U2/T<0>
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 19 | 0 | 13 | 0 | 2 | 0 | 10 | 0 | 3 | 3 | 5 | 3 | 2 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 13 | 3 | 14 | 3 | 4 | 3 | 17 | 3 | 15 | 3 | 0 | 3 | 1 | 3 | 11 | 3 | 12 | 3 | 16
+INPUTS | 5 | U2/T<0>.LFBK  | demi_T  | U2/etatF_FFd1.LFBK  | U2/etatF_FFd2.LFBK  | U2/etatF_FFd3.LFBK
+INPUTMC | 5 | 3 | 10 | 1 | 8 | 3 | 8 | 3 | 5 | 3 | 2
+EQ | 6 | 
+   U2/T<0>.T = demi_T & U2/etatF_FFd3.LFBK
+	# demi_T & U2/etatF_FFd1.LFBK & !U2/T<0>.LFBK
+	# demi_T & !U2/etatF_FFd2.LFBK & U2/T<0>.LFBK
+	# !U2/etatF_FFd1.LFBK & !U2/etatF_FFd2.LFBK & 
+	!U2/etatF_FFd3.LFBK & U2/T<0>.LFBK;
+   U2/T<0>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 3 | 9 | U2/T<1>
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 16 | 0 | 3 | 0 | 9 | 0 | 8 | 3 | 5 | 3 | 2 | 3 | 9 | 3 | 8 | 3 | 13 | 3 | 14 | 3 | 4 | 3 | 15 | 3 | 0 | 3 | 1 | 3 | 11 | 3 | 12 | 3 | 16
+INPUTS | 6 | U2/T<0>.LFBK  | demi_T  | U2/T<1>.LFBK  | U2/etatF_FFd1.LFBK  | U2/etatF_FFd2.LFBK  | U2/etatF_FFd3.LFBK
+INPUTMC | 6 | 3 | 10 | 1 | 8 | 3 | 9 | 3 | 8 | 3 | 5 | 3 | 2
+EQ | 8 | 
+   U2/T<1>.T = demi_T & U2/etatF_FFd3.LFBK & U2/T<0>.LFBK
+	# demi_T & U2/etatF_FFd1.LFBK & U2/T<0>.LFBK & 
+	!U2/T<1>.LFBK
+	# demi_T & !U2/etatF_FFd2.LFBK & U2/T<0>.LFBK & 
+	U2/T<1>.LFBK
+	# !U2/etatF_FFd1.LFBK & !U2/etatF_FFd2.LFBK & 
+	!U2/etatF_FFd3.LFBK & U2/T<1>.LFBK;
+   U2/T<1>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 3 | 8 | U2/etatF_FFd1
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 9 | 3 | 7 | 3 | 2 | 3 | 10 | 3 | 9 | 3 | 8 | 3 | 4 | 3 | 0 | 3 | 1 | 3 | 3
+INPUTS | 6 | U2/T<0>.LFBK  | demi_T  | U2/T<1>.LFBK  | U2/etatF_FFd1.LFBK  | U2/etatF_FFd2.LFBK  | U2/etatF_FFd3.LFBK
+INPUTMC | 6 | 3 | 10 | 1 | 8 | 3 | 9 | 3 | 8 | 3 | 5 | 3 | 2
+EQ | 7 | 
+   U2/etatF_FFd1.T = demi_T & U2/etatF_FFd1.LFBK & !U2/etatF_FFd2.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# demi_T & U2/etatF_FFd1.LFBK & !U2/etatF_FFd3.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# demi_T & !U2/etatF_FFd1.LFBK & U2/etatF_FFd2.LFBK & 
+	U2/etatF_FFd3.LFBK & U2/T<0>.LFBK & U2/T<1>.LFBK;
+   U2/etatF_FFd1.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 2 | U0/AUX<0>
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 9 | 1 | 8 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15
+INPUTS | 4 | U2/etatP<2>.LFBK  | U2/etatP<1>  | U0/AUX<0>.LFBK  | U2/etatP<0>.LFBK
+INPUTMC | 4 | 1 | 7 | 3 | 7 | 1 | 2 | 1 | 9
+EQ | 3 | 
+   !U0/AUX<0>.T = !U2/etatP<1> & !U2/etatP<0>.LFBK & !U0/AUX<0>.LFBK & 
+	!U2/etatP<2>.LFBK;
+   U0/AUX<0>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 10 | U0/AUX<1>
+ATTRIBUTES | 8618752 | 0
+OUTPUTMC | 8 | 1 | 8 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15
+INPUTS | 5 | U0/AUX<1>.LFBK  | U2/etatP<0>.LFBK  | U2/etatP<2>.LFBK  | U2/etatP<1>  | U0/AUX<0>.LFBK
+INPUTMC | 5 | 1 | 10 | 1 | 9 | 1 | 7 | 3 | 7 | 1 | 2
+EQ | 5 | 
+   !U0/AUX<1>.D = U0/AUX<0>.LFBK & U0/AUX<1>.LFBK
+	# !U0/AUX<0>.LFBK & !U0/AUX<1>.LFBK
+	# !U2/etatP<1> & !U2/etatP<0>.LFBK & 
+	!U2/etatP<2>.LFBK;
+   U0/AUX<1>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 13 | U0/AUX<2>
+ATTRIBUTES | 8618752 | 0
+OUTPUTMC | 7 | 1 | 8 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15
+INPUTS | 6 | U0/AUX<2>.LFBK  | U0/AUX<1>.LFBK  | U2/etatP<0>.LFBK  | U2/etatP<2>.LFBK  | U2/etatP<1>  | U0/AUX<0>.LFBK
+INPUTMC | 6 | 1 | 13 | 1 | 10 | 1 | 9 | 1 | 7 | 3 | 7 | 1 | 2
+EQ | 6 | 
+   !U0/AUX<2>.D = !U0/AUX<0>.LFBK & !U0/AUX<2>.LFBK
+	# !U0/AUX<1>.LFBK & !U0/AUX<2>.LFBK
+	# !U2/etatP<1> & !U2/etatP<0>.LFBK & 
+	!U2/etatP<2>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK;
+   U0/AUX<2>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 17 | U0/AUX<3>
+ATTRIBUTES | 8618752 | 0
+OUTPUTMC | 7 | 1 | 8 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 0
+INPUTS | 8 | U0/AUX<3>.LFBK  | U0/AUX<1>.LFBK  | U0/AUX<2>.LFBK  | U2/etatP<0>.LFBK  | U2/etatP<2>.LFBK  | U2/etatP<1>  | EXP4_.EXP  | U0/AUX<0>.LFBK
+INPUTMC | 8 | 1 | 17 | 1 | 10 | 1 | 13 | 1 | 9 | 1 | 7 | 3 | 7 | 1 | 0 | 1 | 2
+IMPORTS | 1 | 1 | 0
+EQ | 11 | 
+   !U0/AUX<3>.D = !U0/AUX<0>.LFBK & !U0/AUX<3>.LFBK
+	# !U0/AUX<1>.LFBK & !U0/AUX<3>.LFBK
+	# !U0/AUX<2>.LFBK & !U0/AUX<3>.LFBK
+	# !U2/etatP<1> & !U2/etatP<0>.LFBK & 
+	!U2/etatP<2>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & 
+	U0/AUX<3>.LFBK
+;Imported pterms FB2_1
+	# !U0/AUX<3>.LFBK & !U0/AUX<4>.LFBK & !U0/AUX<5>.LFBK & 
+	U0/AUX<6>.LFBK & U0/AUX<7>.LFBK;
+   U0/AUX<3>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 12 | U0/AUX<4>
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 6 | 1 | 8 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 0
+INPUTS | 8 | U2/etatP<2>.LFBK  | U2/etatP<1>  | U0/AUX<4>.LFBK  | U0/AUX<0>.LFBK  | U0/AUX<1>.LFBK  | U0/AUX<2>.LFBK  | U0/AUX<3>.LFBK  | U2/etatP<0>.LFBK
+INPUTMC | 8 | 1 | 7 | 3 | 7 | 1 | 12 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 9
+EQ | 9 | 
+   U0/AUX<4>.T = !U2/etatP<1> & !U2/etatP<0>.LFBK & U0/AUX<4>.LFBK & 
+	!U2/etatP<2>.LFBK
+	# U2/etatP<1> & U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & 
+	U0/AUX<2>.LFBK & U0/AUX<3>.LFBK
+	# U2/etatP<0>.LFBK & U0/AUX<0>.LFBK & 
+	U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & U0/AUX<3>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & 
+	U0/AUX<3>.LFBK & U2/etatP<2>.LFBK;
+   U0/AUX<4>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 11 | U0/AUX<5>
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 5 | 1 | 8 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 0
+INPUTS | 9 | U2/etatP<2>.LFBK  | U2/etatP<1>  | U0/AUX<5>.LFBK  | U0/AUX<0>.LFBK  | U0/AUX<1>.LFBK  | U0/AUX<2>.LFBK  | U0/AUX<3>.LFBK  | U0/AUX<4>.LFBK  | U2/etatP<0>.LFBK
+INPUTMC | 9 | 1 | 7 | 3 | 7 | 1 | 11 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 9
+EQ | 9 | 
+   U0/AUX<5>.T = !U2/etatP<1> & !U2/etatP<0>.LFBK & U0/AUX<5>.LFBK & 
+	!U2/etatP<2>.LFBK
+	# U2/etatP<1> & U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & 
+	U0/AUX<2>.LFBK & U0/AUX<3>.LFBK & U0/AUX<4>.LFBK
+	# U2/etatP<0>.LFBK & U0/AUX<0>.LFBK & 
+	U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & U0/AUX<3>.LFBK & U0/AUX<4>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & 
+	U0/AUX<3>.LFBK & U0/AUX<4>.LFBK & U2/etatP<2>.LFBK;
+   U0/AUX<5>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 16 | U0/AUX<6>
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 4 | 1 | 8 | 1 | 16 | 1 | 15 | 1 | 0
+INPUTS | 11 | U2/etatP<2>.LFBK  | U2/etatP<1>  | U0/AUX<6>.LFBK  | U0/AUX<0>.LFBK  | U0/AUX<1>.LFBK  | U0/AUX<2>.LFBK  | U0/AUX<3>.LFBK  | U0/AUX<4>.LFBK  | U0/AUX<5>.LFBK  | U0/AUX<7>.LFBK  | U2/etatP<0>.LFBK
+INPUTMC | 11 | 1 | 7 | 3 | 7 | 1 | 16 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 15 | 1 | 9
+EQ | 14 | 
+   U0/AUX<6>.T = !U2/etatP<1> & !U2/etatP<0>.LFBK & U0/AUX<6>.LFBK & 
+	!U2/etatP<2>.LFBK
+	# U2/etatP<1> & U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & 
+	U0/AUX<2>.LFBK & U0/AUX<3>.LFBK & U0/AUX<4>.LFBK & U0/AUX<5>.LFBK
+	# U2/etatP<0>.LFBK & U0/AUX<0>.LFBK & 
+	U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & U0/AUX<3>.LFBK & U0/AUX<4>.LFBK & 
+	U0/AUX<5>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & 
+	U0/AUX<3>.LFBK & U0/AUX<4>.LFBK & U0/AUX<5>.LFBK & 
+	U2/etatP<2>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & 
+	!U0/AUX<3>.LFBK & !U0/AUX<4>.LFBK & !U0/AUX<5>.LFBK & U0/AUX<6>.LFBK & 
+	U0/AUX<7>.LFBK;
+   U0/AUX<6>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 1 | 15 | U0/AUX<7>
+ATTRIBUTES | 4424448 | 0
+OUTPUTMC | 4 | 1 | 8 | 1 | 16 | 1 | 15 | 1 | 0
+INPUTS | 11 | U2/etatP<2>.LFBK  | U2/etatP<1>  | U0/AUX<7>.LFBK  | U0/AUX<0>.LFBK  | U0/AUX<1>.LFBK  | U0/AUX<2>.LFBK  | U0/AUX<3>.LFBK  | U0/AUX<4>.LFBK  | U0/AUX<5>.LFBK  | U0/AUX<6>.LFBK  | U2/etatP<0>.LFBK
+INPUTMC | 11 | 1 | 7 | 3 | 7 | 1 | 15 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 9
+EQ | 15 | 
+   U0/AUX<7>.T = !U2/etatP<1> & !U2/etatP<0>.LFBK & U0/AUX<7>.LFBK & 
+	!U2/etatP<2>.LFBK
+	# U2/etatP<1> & U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & 
+	U0/AUX<2>.LFBK & U0/AUX<3>.LFBK & U0/AUX<4>.LFBK & U0/AUX<5>.LFBK & 
+	U0/AUX<6>.LFBK
+	# U2/etatP<0>.LFBK & U0/AUX<0>.LFBK & 
+	U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & U0/AUX<3>.LFBK & U0/AUX<4>.LFBK & 
+	U0/AUX<5>.LFBK & U0/AUX<6>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & 
+	U0/AUX<3>.LFBK & U0/AUX<4>.LFBK & U0/AUX<5>.LFBK & U0/AUX<6>.LFBK & 
+	U2/etatP<2>.LFBK
+	# U0/AUX<0>.LFBK & U0/AUX<1>.LFBK & U0/AUX<2>.LFBK & 
+	!U0/AUX<3>.LFBK & !U0/AUX<4>.LFBK & !U0/AUX<5>.LFBK & U0/AUX<6>.LFBK & 
+	U0/AUX<7>.LFBK;
+   U0/AUX<7>.CLK = H;	// GCK
+GLOBALS | 1 | 2 | H
+
+MACROCELL | 3 | 13 | sortie_OBUF
+ATTRIBUTES | 396034 | 0
+OUTPUTMC | 1 | 3 | 14
+INPUTS | 11 | U2/T<0>.LFBK  | $OpTx$BIN_STEP$721  | U2/etatP<0>  | U2/etatP<2>  | E<4>  | E<0>  | E<8>  | E<12>  | U2/T<1>.LFBK  | EXP9_.EXP  | U2/etatP<1>.LFBK
+INPUTMC | 7 | 3 | 10 | 0 | 1 | 1 | 9 | 1 | 7 | 3 | 9 | 3 | 12 | 3 | 7
+INPUTP | 4 | 13 | 9 | 29 | 50
+EXPORTS | 1 | 3 | 14
+IMPORTS | 1 | 3 | 12
+EQ | 35 | 
+   !sortie = !$OpTx$BIN_STEP$721 & U2/etatP<1>.LFBK
+	# U2/etatP<0> & U2/etatP<2> & !$OpTx$BIN_STEP$721
+	# !U2/etatP<0> & !U2/etatP<2> & !$OpTx$BIN_STEP$721
+;Imported pterms FB4_13
+	# E<1> & E<0> & E<8> & E<2> & E<3> & E<12> & 
+	!U2/etatP<0> & E<7> & !$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK
+	# E<1> & E<0> & E<8> & E<2> & E<3> & E<12> & 
+	!U2/etatP<0> & E<7> & !$OpTx$BIN_STEP$721 & U2/T<1>.LFBK
+	# E<0> & E<8> & E<3> & E<12> & !U2/etatP<0> & 
+	E<11> & E<15> & E<7> & !$OpTx$BIN_STEP$721 & 
+	U2/T<1>.LFBK
+	# E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<15> & !$OpTx$BIN_STEP$721 & 
+	U2/T<1>.LFBK
+	# E<0> & E<8> & E<10> & E<5> & E<3> & 
+	!U2/etatP<0> & E<11> & E<15> & E<7> & !$OpTx$BIN_STEP$721 & 
+	U2/T<1>.LFBK
+;Imported pterms FB4_12
+	# E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<9> & E<15> & !$OpTx$BIN_STEP$721
+	# E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<15> & !$OpTx$BIN_STEP$721 & 
+	!U2/T<0>.LFBK
+	# E<1> & E<0> & E<8> & E<2> & E<3> & E<12> & 
+	!U2/etatP<0> & E<11> & E<9> & E<7> & !$OpTx$BIN_STEP$721
+	# E<1> & E<0> & E<2> & E<10> & E<5> & E<13> & 
+	E<12> & !U2/etatP<0> & E<11> & E<14> & E<9> & E<15> & 
+	!$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK & !U2/T<1>.LFBK
+	# E<1> & E<0> & E<2> & E<10> & E<13> & E<3> & 
+	E<12> & !U2/etatP<0> & E<11> & E<14> & E<9> & E<15> & 
+	E<7> & !$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK & !U2/T<1>.LFBK;
+    sortie_OBUF.EXP  =  E<4> & E<0> & !E<8> & E<12> & U2/etatP<0> & 
+	!U2/etatP<2> & !U2/T<0>.LFBK & !U2/T<1>.LFBK
+	# !E<4> & E<0> & E<8> & E<12> & U2/etatP<0> & 
+	!U2/etatP<2> & U2/T<0>.LFBK & !U2/T<1>.LFBK
+
+MACROCELL | 1 | 14 | $OpTx$FX_DC$74
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 3 | 2 | 3 | 1
+INPUTS | 4 | E<1>  | E<2>  | E<3>  | E<7>
+INPUTP | 4 | 10 | 11 | 12 | 27
+EQ | 4 | 
+   $OpTx$FX_DC$74 = E<1> & E<2> & E<3> & !E<7>
+	# E<1> & E<2> & !E<3> & E<7>
+	# E<1> & !E<2> & E<3> & E<7>
+	# !E<1> & E<2> & E<3> & E<7>;
+
+MACROCELL | 0 | 16 | $OpTx$FX_DC$75
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 4 | E<4>  | E<0>  | E<8>  | E<12>
+INPUTP | 4 | 13 | 9 | 29 | 50
+EQ | 4 | 
+   $OpTx$FX_DC$75 = E<4> & E<0> & E<8> & !E<12>
+	# E<4> & E<0> & !E<8> & E<12>
+	# E<4> & !E<0> & E<8> & E<12>
+	# !E<4> & E<0> & E<8> & E<12>;
+
+MACROCELL | 0 | 1 | $OpTx$BIN_STEP$721
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 3 | 13 | 3 | 11 | 3 | 12
+INPUTS | 14 | $OpTx$$OpTx$FX_DC$65_INV$735  | $OpTx$FX_SC$82  | $OpTx$FX_DC$95  | E<6>  | $OpTx$FX_SC$64  | $OpTx$$OpTx$FX_DC$57_INV$731  | $OpTx$$OpTx$FX_DC$60_INV$734.LFBK  | $OpTx$$OpTx$FX_DC$49_INV$726.LFBK  | E<2>  | $OpTx$$OpTx$FX_DC$58_INV$732.LFBK  | $OpTx$$OpTx$FX_DC$51_INV$727  | EXP0_.EXP  | EXP1_.EXP  | $OpTx$$OpTx$FX_DC$32_INV$725.LFBK
+INPUTMC | 12 | 2 | 14 | 3 | 6 | 3 | 14 | 1 | 3 | 2 | 15 | 0 | 8 | 0 | 13 | 0 | 10 | 1 | 6 | 0 | 0 | 0 | 2 | 0 | 14
+INPUTP | 2 | 26 | 11
+IMPORTS | 2 | 0 | 0 | 0 | 2
+EQ | 52 | 
+   $OpTx$BIN_STEP$721 = !E<2> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$49_INV$726.LFBK
+	# !E<6> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$57_INV$731
+	# $OpTx$FX_SC$64 & !$OpTx$$OpTx$FX_DC$51_INV$727 & 
+	!$OpTx$$OpTx$FX_DC$58_INV$732.LFBK
+	# $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$32_INV$725.LFBK & !$OpTx$$OpTx$FX_DC$60_INV$734.LFBK
+	# $OpTx$$OpTx$FX_DC$65_INV$735 & $OpTx$FX_SC$82 & 
+	$OpTx$FX_DC$95
+;Imported pterms FB1_1
+	# !E<3> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$65_INV$735
+	# !E<3> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$59_INV$733.LFBK
+	# $OpTx$FX_SC$64 & !$OpTx$$OpTx$FX_DC$65_INV$735 & 
+	!$OpTx$$OpTx$FX_DC$27_INV$722
+	# $OpTx$FX_SC$64 & !$OpTx$$OpTx$FX_DC$65_INV$735 & 
+	!$OpTx$$OpTx$FX_DC$31_INV$724.LFBK
+	# $OpTx$FX_SC$64 & !$OpTx$$OpTx$FX_DC$27_INV$722 & 
+	!$OpTx$$OpTx$FX_DC$31_INV$724.LFBK
+;Imported pterms FB1_18
+	# !E<4> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<2> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<13> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$90_INV$736
+	# !E<12> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<9> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$90_INV$736
+;Imported pterms FB1_3
+	# !E<4> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$56_INV$730.LFBK
+	# !E<10> & U2/T<0> & $OpTx$FX_SC$64
+	# !E<5> & !U2/T<0> & $OpTx$FX_SC$64
+	# !E<13> & !E<9> & $OpTx$FX_SC$64
+	# !E<15> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$54_INV$729
+;Imported pterms FB1_4
+	# !E<7> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$65_INV$735
+	# U2/T<0> & U2/T<1> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !U2/T<0> & !U2/T<1> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$52_INV$728.LFBK
+	# E<0> & E<8> & $OpTx$$OpTx$FX_DC$65_INV$735 & 
+	$OpTx$FX_SC$37 & $OpTx$FX_DC$96 & 
+	$OpTx$$OpTx$FX_DC$32_INV$725.LFBK
+	# E<0> & E<8> & $OpTx$FX_SC$82 & $OpTx$FX_SC$37 & 
+	$OpTx$FX_DC$93 & $OpTx$$OpTx$FX_DC$32_INV$725.LFBK;
+
+MACROCELL | 1 | 3 | $OpTx$FX_SC$64
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 5 | 0 | 1 | 0 | 0 | 0 | 2 | 0 | 3 | 0 | 17
+INPUTS | 3 | U2/etatP<2>.LFBK  | U2/etatP<1>  | U2/etatP<0>.LFBK
+INPUTMC | 3 | 1 | 7 | 3 | 7 | 1 | 9
+EQ | 2 | 
+   $OpTx$FX_SC$64 = !U2/etatP<1> & !U2/etatP<0>.LFBK & 
+	U2/etatP<2>.LFBK;
+
+MACROCELL | 0 | 12 | $OpTx$$OpTx$FX_DC$52_INV$728
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 2 | E<6>  | E<7>
+INPUTP | 2 | 26 | 27
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$52_INV$728 = E<6> & E<7>;
+
+MACROCELL | 2 | 14 | $OpTx$$OpTx$FX_DC$65_INV$735
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 3 | 0 | 1 | 0 | 0 | 0 | 3
+INPUTS | 4 | E<13>  | E<6>  | E<14>  | E<9>
+INPUTP | 4 | 52 | 26 | 58 | 38
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$65_INV$735 = E<13> & E<6> & E<14> & E<9>;
+
+MACROCELL | 3 | 6 | $OpTx$FX_SC$82
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 1 | 0 | 3
+INPUTS | 8 | E<1>  | E<2>  | E<10>  | E<5>  | E<3>  | E<11>  | E<15>  | E<7>
+INPUTP | 8 | 10 | 11 | 49 | 15 | 12 | 46 | 61 | 27
+EQ | 2 | 
+   $OpTx$FX_SC$82 = E<1> & E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & E<7>;
+
+MACROCELL | 3 | 14 | $OpTx$FX_DC$95
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 1 | 3 | 15
+INPUTS | 14 | E<4>  | E<8>  | E<12>  | U2/etatP<0>  | U2/T<1>.LFBK  | U2/etatP<2>  | E<0>  | U2/T<0>.LFBK  | E<13>  | E<6>  | E<14>  | E<9>  | sortie_OBUF.EXP  | U2/etatP<1>.LFBK
+INPUTMC | 6 | 1 | 9 | 3 | 9 | 1 | 7 | 3 | 10 | 3 | 13 | 3 | 7
+INPUTP | 8 | 13 | 29 | 50 | 9 | 52 | 26 | 58 | 38
+EXPORTS | 1 | 3 | 15
+IMPORTS | 1 | 3 | 13
+EQ | 15 | 
+   $OpTx$FX_DC$95 = E<4> & E<8> & E<12> & !U2/etatP<0> & 
+	U2/etatP<2> & !U2/etatP<1>.LFBK
+	# E<4> & E<0> & E<8> & !E<12> & U2/etatP<0> & 
+	!U2/etatP<2> & !U2/T<1>.LFBK
+;Imported pterms FB4_14
+	# E<4> & E<0> & !E<8> & E<12> & U2/etatP<0> & 
+	!U2/etatP<2> & !U2/T<0>.LFBK & !U2/T<1>.LFBK
+	# !E<4> & E<0> & E<8> & E<12> & U2/etatP<0> & 
+	!U2/etatP<2> & U2/T<0>.LFBK & !U2/T<1>.LFBK;
+    $OpTx$FX_DC$95.EXP  =  E<13> & E<6> & E<14> & !E<9> & !U2/T<0>.LFBK & 
+	!U2/T<1>.LFBK
+	# E<13> & !E<6> & E<14> & E<9> & U2/T<0>.LFBK & 
+	!U2/T<1>.LFBK
+	# E<13> & !E<6> & E<14> & E<9> & !U2/T<0>.LFBK & 
+	U2/T<1>.LFBK
+
+MACROCELL | 2 | 15 | $OpTx$$OpTx$FX_DC$57_INV$731
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 2 | E<13>  | E<14>
+INPUTP | 2 | 52 | 58
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$57_INV$731 = E<13> & E<14>;
+
+MACROCELL | 0 | 14 | $OpTx$$OpTx$FX_DC$32_INV$725
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 2 | 0 | 1 | 0 | 3
+INPUTS | 2 | E<4>  | E<12>
+INPUTP | 2 | 13 | 50
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$32_INV$725 = E<4> & E<12>;
+
+MACROCELL | 0 | 8 | $OpTx$$OpTx$FX_DC$60_INV$734
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 2 | E<7>  | U2/T<1>
+INPUTMC | 1 | 3 | 9
+INPUTP | 1 | 27
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$60_INV$734 = E<7> & !U2/T<1>;
+
+MACROCELL | 0 | 13 | $OpTx$$OpTx$FX_DC$49_INV$726
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 2 | E<10>  | U2/T<0>
+INPUTMC | 1 | 3 | 10
+INPUTP | 1 | 49
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$49_INV$726 = E<10> & !U2/T<0>;
+
+MACROCELL | 1 | 6 | $OpTx$$OpTx$FX_DC$51_INV$727
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 2 | E<4>  | E<1>
+INPUTP | 2 | 13 | 10
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$51_INV$727 = E<4> & E<1>;
+
+MACROCELL | 0 | 10 | $OpTx$$OpTx$FX_DC$58_INV$732
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 2 | E<5>  | U2/T<0>
+INPUTMC | 1 | 3 | 10
+INPUTP | 1 | 15
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$58_INV$732 = E<5> & U2/T<0>;
+
+MACROCELL | 0 | 9 | $OpTx$$OpTx$FX_DC$59_INV$733
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 2 | E<7>  | U2/T<1>
+INPUTMC | 1 | 3 | 9
+INPUTP | 1 | 27
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$59_INV$733 = E<7> & U2/T<1>;
+
+MACROCELL | 2 | 17 | $OpTx$$OpTx$FX_DC$27_INV$722
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 2 | E<11>  | E<15>
+INPUTP | 2 | 46 | 61
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$27_INV$722 = E<11> & E<15>;
+
+MACROCELL | 0 | 15 | $OpTx$$OpTx$FX_DC$31_INV$724
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 2 | E<10>  | E<5>
+INPUTP | 2 | 49 | 15
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$31_INV$724 = E<10> & E<5>;
+
+MACROCELL | 0 | 11 | $OpTx$$OpTx$FX_DC$56_INV$730
+ATTRIBUTES | 199424 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 2 | E<13>  | E<12>
+INPUTP | 2 | 52 | 50
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$56_INV$730 = E<13> & E<12>;
+
+MACROCELL | 1 | 5 | $OpTx$$OpTx$FX_DC$54_INV$729
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 2 | E<4>  | E<11>
+INPUTP | 2 | 13 | 46
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$54_INV$729 = E<4> & E<11>;
+
+MACROCELL | 2 | 16 | $OpTx$$OpTx$FX_DC$29_INV$723
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 3 | 0 | 17
+INPUTS | 2 | E<6>  | E<14>
+INPUTP | 2 | 26 | 58
+EQ | 1 | 
+   $OpTx$$OpTx$FX_DC$29_INV$723 = E<6> & E<14>;
+
+MACROCELL | 3 | 4 | $OpTx$$OpTx$FX_DC$90_INV$736
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 17 | 3 | 3
+INPUTS | 21 | E<1>  | E<12>  | E<14>  | U2/T<1>.LFBK  | E<4>  | E<0>  | E<8>  | E<2>  | E<10>  | E<5>  | E<13>  | E<3>  | E<11>  | E<6>  | E<9>  | E<15>  | E<7>  | demi_T  | U2/etatF_FFd1.LFBK  | U2/etatF_FFd2.EXP  | U2/T<0>.LFBK
+INPUTMC | 5 | 3 | 9 | 1 | 8 | 3 | 8 | 3 | 5 | 3 | 10
+INPUTP | 16 | 10 | 50 | 58 | 13 | 9 | 29 | 11 | 49 | 15 | 52 | 12 | 46 | 26 | 38 | 61 | 27
+EXPORTS | 1 | 3 | 3
+IMPORTS | 1 | 3 | 5
+EQ | 19 | 
+   $OpTx$$OpTx$FX_DC$90_INV$736 = E<1> & E<12> & E<14> & U2/T<0>.LFBK
+;Imported pterms FB4_6
+	# E<1> & E<12> & E<14> & !U2/T<1>.LFBK;
+    $OpTx$$OpTx$FX_DC$90_INV$736.EXP  =  E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	!E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & !E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & !E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & !E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+
+MACROCELL | 1 | 4 | $OpTx$FX_SC$37
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 2 | U2/etatP<2>.LFBK  | U2/etatP<0>.LFBK
+INPUTMC | 2 | 1 | 7 | 1 | 9
+EQ | 1 | 
+   $OpTx$FX_SC$37 = U2/etatP<0>.LFBK & !U2/etatP<2>.LFBK;
+
+MACROCELL | 3 | 17 | $OpTx$FX_DC$96
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 10 | E<1>  | E<2>  | E<10>  | E<5>  | E<3>  | E<11>  | E<15>  | E<7>  | EXP10_.EXP  | U2/T<0>.LFBK
+INPUTMC | 2 | 3 | 16 | 3 | 10
+INPUTP | 8 | 10 | 11 | 49 | 15 | 12 | 46 | 61 | 27
+IMPORTS | 1 | 3 | 16
+EQ | 21 | 
+   $OpTx$FX_DC$96 = E<1> & E<2> & E<10> & E<5> & E<3> & E<11> & 
+	!E<15> & E<7>
+	# E<1> & E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & !E<7> & U2/T<0>.LFBK
+	# E<1> & E<2> & E<10> & E<5> & E<3> & !E<11> & 
+	E<15> & E<7> & !U2/T<0>.LFBK
+	# E<1> & E<2> & E<10> & !E<5> & E<3> & E<11> & 
+	E<15> & E<7> & U2/T<0>.LFBK
+	# E<1> & E<2> & !E<10> & E<5> & E<3> & E<11> & 
+	E<15> & E<7> & !U2/T<0>.LFBK
+;Imported pterms FB4_17
+	# E<1> & E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & !E<7> & U2/T<1>.LFBK
+	# E<1> & E<2> & E<10> & E<5> & E<3> & !E<11> & 
+	E<15> & E<7> & U2/T<1>.LFBK
+	# E<1> & E<2> & E<10> & E<5> & !E<3> & E<11> & 
+	E<15> & E<7> & U2/T<1>.LFBK
+	# E<1> & !E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & E<7> & !U2/T<0>.LFBK & U2/T<1>.LFBK
+	# !E<1> & E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & E<7> & U2/T<0>.LFBK & U2/T<1>.LFBK;
+
+MACROCELL | 3 | 15 | $OpTx$FX_DC$93
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 7 | E<13>  | E<6>  | E<14>  | E<9>  | U2/T<1>.LFBK  | $OpTx$FX_DC$95.EXP  | U2/T<0>.LFBK
+INPUTMC | 3 | 3 | 9 | 3 | 14 | 3 | 10
+INPUTP | 4 | 52 | 26 | 58 | 38
+IMPORTS | 1 | 3 | 14
+EQ | 13 | 
+   $OpTx$FX_DC$93 = E<13> & E<6> & !E<14> & E<9> & !U2/T<0>.LFBK
+	# E<13> & E<6> & !E<14> & E<9> & !U2/T<1>.LFBK
+	# !E<13> & E<6> & E<14> & E<9> & U2/T<0>.LFBK
+	# !E<13> & E<6> & E<14> & E<9> & !U2/T<1>.LFBK
+	# E<13> & E<6> & E<14> & !E<9> & U2/T<0>.LFBK & 
+	U2/T<1>.LFBK
+;Imported pterms FB4_15
+	# E<13> & E<6> & E<14> & !E<9> & !U2/T<0>.LFBK & 
+	!U2/T<1>.LFBK
+	# E<13> & !E<6> & E<14> & E<9> & U2/T<0>.LFBK & 
+	!U2/T<1>.LFBK
+	# E<13> & !E<6> & E<14> & E<9> & !U2/T<0>.LFBK & 
+	U2/T<1>.LFBK;
+
+MACROCELL | 0 | 0 | EXP0_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 7 | E<3>  | $OpTx$FX_SC$64  | $OpTx$$OpTx$FX_DC$65_INV$735  | $OpTx$$OpTx$FX_DC$31_INV$724.LFBK  | $OpTx$$OpTx$FX_DC$27_INV$722  | EXP3_.EXP  | $OpTx$$OpTx$FX_DC$59_INV$733.LFBK
+INPUTMC | 6 | 1 | 3 | 2 | 14 | 0 | 15 | 2 | 17 | 0 | 17 | 0 | 9
+INPUTP | 1 | 12
+EXPORTS | 1 | 0 | 1
+IMPORTS | 1 | 0 | 17
+EQ | 21 | 
+       EXP0_.EXP  =  !E<3> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$65_INV$735
+	# !E<3> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$59_INV$733.LFBK
+	# $OpTx$FX_SC$64 & !$OpTx$$OpTx$FX_DC$65_INV$735 & 
+	!$OpTx$$OpTx$FX_DC$27_INV$722
+	# $OpTx$FX_SC$64 & !$OpTx$$OpTx$FX_DC$65_INV$735 & 
+	!$OpTx$$OpTx$FX_DC$31_INV$724.LFBK
+	# $OpTx$FX_SC$64 & !$OpTx$$OpTx$FX_DC$27_INV$722 & 
+	!$OpTx$$OpTx$FX_DC$31_INV$724.LFBK
+;Imported pterms FB1_18
+	# !E<4> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<2> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<13> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$90_INV$736
+	# !E<12> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<9> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$90_INV$736
+
+MACROCELL | 0 | 2 | EXP1_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 1
+INPUTS | 11 | E<4>  | $OpTx$FX_SC$64  | E<10>  | U2/T<0>  | E<5>  | E<13>  | E<9>  | E<15>  | $OpTx$$OpTx$FX_DC$54_INV$729  | EXP2_.EXP  | $OpTx$$OpTx$FX_DC$56_INV$730.LFBK
+INPUTMC | 5 | 1 | 3 | 3 | 10 | 1 | 5 | 0 | 3 | 0 | 11
+INPUTP | 6 | 13 | 49 | 15 | 52 | 38 | 61
+EXPORTS | 1 | 0 | 1
+IMPORTS | 1 | 0 | 3
+EQ | 19 | 
+       EXP1_.EXP  =  !E<4> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$56_INV$730.LFBK
+	# !E<10> & U2/T<0> & $OpTx$FX_SC$64
+	# !E<5> & !U2/T<0> & $OpTx$FX_SC$64
+	# !E<13> & !E<9> & $OpTx$FX_SC$64
+	# !E<15> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$54_INV$729
+;Imported pterms FB1_4
+	# !E<7> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$65_INV$735
+	# U2/T<0> & U2/T<1> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !U2/T<0> & !U2/T<1> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$52_INV$728.LFBK
+	# E<0> & E<8> & $OpTx$$OpTx$FX_DC$65_INV$735 & 
+	$OpTx$FX_SC$37 & $OpTx$FX_DC$96 & 
+	$OpTx$$OpTx$FX_DC$32_INV$725.LFBK
+	# E<0> & E<8> & $OpTx$FX_SC$82 & $OpTx$FX_SC$37 & 
+	$OpTx$FX_DC$93 & $OpTx$$OpTx$FX_DC$32_INV$725.LFBK
+
+MACROCELL | 0 | 3 | EXP2_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 14 | E<7>  | $OpTx$FX_SC$64  | $OpTx$$OpTx$FX_DC$65_INV$735  | U2/T<0>  | U2/T<1>  | $OpTx$$OpTx$FX_DC$29_INV$723  | $OpTx$$OpTx$FX_DC$32_INV$725.LFBK  | E<0>  | E<8>  | $OpTx$FX_SC$37  | $OpTx$FX_DC$96  | $OpTx$FX_SC$82  | $OpTx$FX_DC$93  | $OpTx$$OpTx$FX_DC$52_INV$728.LFBK
+INPUTMC | 11 | 1 | 3 | 2 | 14 | 3 | 10 | 3 | 9 | 2 | 16 | 0 | 14 | 1 | 4 | 3 | 17 | 3 | 6 | 3 | 15 | 0 | 12
+INPUTP | 3 | 27 | 9 | 29
+EXPORTS | 1 | 0 | 2
+EQ | 11 | 
+       EXP2_.EXP  =  !E<7> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$65_INV$735
+	# U2/T<0> & U2/T<1> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !U2/T<0> & !U2/T<1> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$52_INV$728.LFBK
+	# E<0> & E<8> & $OpTx$$OpTx$FX_DC$65_INV$735 & 
+	$OpTx$FX_SC$37 & $OpTx$FX_DC$96 & 
+	$OpTx$$OpTx$FX_DC$32_INV$725.LFBK
+	# E<0> & E<8> & $OpTx$FX_SC$82 & $OpTx$FX_SC$37 & 
+	$OpTx$FX_DC$93 & $OpTx$$OpTx$FX_DC$32_INV$725.LFBK
+
+MACROCELL | 0 | 17 | EXP3_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 0
+INPUTS | 8 | E<4>  | $OpTx$FX_SC$64  | $OpTx$$OpTx$FX_DC$29_INV$723  | E<2>  | E<13>  | $OpTx$$OpTx$FX_DC$90_INV$736  | E<12>  | E<9>
+INPUTMC | 3 | 1 | 3 | 2 | 16 | 3 | 4
+INPUTP | 5 | 13 | 11 | 52 | 50 | 38
+EXPORTS | 1 | 0 | 0
+EQ | 10 | 
+       EXP3_.EXP  =  !E<4> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<2> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<13> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$90_INV$736
+	# !E<12> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$29_INV$723
+	# !E<9> & $OpTx$FX_SC$64 & 
+	!$OpTx$$OpTx$FX_DC$90_INV$736
+
+MACROCELL | 1 | 0 | EXP4_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 17
+INPUTS | 5 | U0/AUX<4>.LFBK  | U0/AUX<5>.LFBK  | U0/AUX<6>.LFBK  | U0/AUX<7>.LFBK  | U0/AUX<3>.LFBK
+INPUTMC | 5 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15 | 1 | 17
+EXPORTS | 1 | 1 | 17
+EQ | 2 | 
+       EXP4_.EXP  =  !U0/AUX<3>.LFBK & !U0/AUX<4>.LFBK & !U0/AUX<5>.LFBK & 
+	U0/AUX<6>.LFBK & U0/AUX<7>.LFBK
+
+MACROCELL | 3 | 0 | EXP5_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 22 | E<4>  | E<1>  | E<0>  | E<8>  | E<2>  | E<10>  | E<5>  | E<13>  | E<3>  | E<12>  | E<11>  | E<6>  | E<14>  | E<9>  | E<15>  | E<7>  | U2/etatF_FFd3.LFBK  | U2/etatF_FFd1.LFBK  | U2/T<0>.LFBK  | demi_T  | U2/T<1>.LFBK  | U2/etatF_FFd2.LFBK
+INPUTMC | 6 | 3 | 2 | 3 | 8 | 3 | 10 | 1 | 8 | 3 | 9 | 3 | 5
+INPUTP | 16 | 13 | 10 | 9 | 29 | 11 | 49 | 15 | 52 | 12 | 50 | 46 | 26 | 58 | 38 | 61 | 27
+EXPORTS | 1 | 3 | 1
+EQ | 20 | 
+       EXP5_.EXP  =  E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	!E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & !E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & !E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	!E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & !E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+
+MACROCELL | 3 | 1 | EXP6_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 2
+INPUTS | 25 | E<1>  | E<2>  | E<10>  | E<5>  | E<13>  | E<3>  | E<11>  | E<6>  | E<14>  | E<9>  | E<15>  | E<7>  | U2/etatF_FFd3.LFBK  | U2/etatF_FFd1.LFBK  | U2/T<0>.LFBK  | $OpTx$FX_DC$75  | E<4>  | E<0>  | E<8>  | E<12>  | demi_T  | U2/T<1>.LFBK  | $OpTx$FX_DC$74  | EXP5_.EXP  | U2/etatF_FFd2.LFBK
+INPUTMC | 9 | 3 | 2 | 3 | 8 | 3 | 10 | 0 | 16 | 1 | 8 | 3 | 9 | 1 | 14 | 3 | 0 | 3 | 5
+INPUTP | 16 | 10 | 11 | 49 | 15 | 52 | 12 | 46 | 26 | 58 | 38 | 61 | 27 | 13 | 9 | 29 | 50
+EXPORTS | 1 | 3 | 2
+IMPORTS | 1 | 3 | 0
+EQ | 39 | 
+       EXP6_.EXP  =  E<1> & E<2> & E<10> & E<5> & E<13> & E<3> & 
+	E<11> & E<6> & E<14> & E<9> & E<15> & E<7> & 
+	$OpTx$FX_DC$75 & !U2/etatF_FFd1.LFBK & !U2/etatF_FFd2.LFBK & 
+	!U2/etatF_FFd3.LFBK
+	# E<4> & E<0> & E<8> & E<10> & E<5> & E<13> & 
+	E<12> & E<11> & E<6> & E<14> & E<9> & E<15> & demi_T & 
+	$OpTx$FX_DC$74 & U2/etatF_FFd1.LFBK & U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<1> & E<2> & E<10> & E<5> & E<13> & E<3> & 
+	E<11> & E<6> & E<14> & E<9> & E<15> & E<7> & demi_T & 
+	$OpTx$FX_DC$75 & U2/etatF_FFd1.LFBK & U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	!E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & !E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+;Imported pterms FB4_1
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	!E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & !E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & !E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	!E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & !E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+
+MACROCELL | 3 | 3 | EXP7_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 2
+INPUTS | 20 | E<4>  | E<1>  | E<0>  | E<8>  | E<2>  | E<10>  | E<5>  | E<13>  | E<3>  | E<12>  | E<11>  | E<6>  | E<14>  | E<9>  | E<15>  | E<7>  | U2/etatF_FFd3.LFBK  | U2/etatF_FFd1.LFBK  | $OpTx$$OpTx$FX_DC$90_INV$736.EXP  | U2/etatF_FFd2.LFBK
+INPUTMC | 4 | 3 | 2 | 3 | 8 | 3 | 4 | 3 | 5
+INPUTP | 16 | 13 | 10 | 9 | 29 | 11 | 49 | 15 | 52 | 12 | 50 | 46 | 26 | 58 | 38 | 61 | 27
+EXPORTS | 1 | 3 | 2
+IMPORTS | 1 | 3 | 4
+EQ | 37 | 
+       EXP7_.EXP  =  E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & !E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & !E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & !E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & !E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & !E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & !U2/etatF_FFd1.LFBK & 
+	!U2/etatF_FFd2.LFBK & !U2/etatF_FFd3.LFBK
+;Imported pterms FB4_5
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	!E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & E<6> & !E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & E<13> & E<3> & E<12> & E<11> & !E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+	# E<4> & E<1> & E<0> & E<8> & E<2> & E<10> & 
+	E<5> & !E<13> & E<3> & E<12> & E<11> & E<6> & E<14> & 
+	E<9> & E<15> & E<7> & demi_T & U2/etatF_FFd1.LFBK & 
+	U2/T<0>.LFBK & U2/T<1>.LFBK
+
+MACROCELL | 3 | 11 | EXP8_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 12
+INPUTS | 18 | E<1>  | E<0>  | E<8>  | E<2>  | E<10>  | E<5>  | U2/etatP<0>  | E<11>  | E<9>  | E<15>  | $OpTx$BIN_STEP$721  | U2/T<1>.LFBK  | E<3>  | E<12>  | E<7>  | E<13>  | E<14>  | U2/T<0>.LFBK
+INPUTMC | 4 | 1 | 9 | 0 | 1 | 3 | 9 | 3 | 10
+INPUTP | 14 | 10 | 9 | 29 | 11 | 49 | 15 | 46 | 38 | 61 | 12 | 50 | 27 | 52 | 58
+EXPORTS | 1 | 3 | 12
+EQ | 13 | 
+       EXP8_.EXP  =  E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<9> & E<15> & !$OpTx$BIN_STEP$721
+	# E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<15> & !$OpTx$BIN_STEP$721 & 
+	!U2/T<0>.LFBK
+	# E<1> & E<0> & E<8> & E<2> & E<3> & E<12> & 
+	!U2/etatP<0> & E<11> & E<9> & E<7> & !$OpTx$BIN_STEP$721
+	# E<1> & E<0> & E<2> & E<10> & E<5> & E<13> & 
+	E<12> & !U2/etatP<0> & E<11> & E<14> & E<9> & E<15> & 
+	!$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK & !U2/T<1>.LFBK
+	# E<1> & E<0> & E<2> & E<10> & E<13> & E<3> & 
+	E<12> & !U2/etatP<0> & E<11> & E<14> & E<9> & E<15> & 
+	E<7> & !$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK & !U2/T<1>.LFBK
+
+MACROCELL | 3 | 12 | EXP9_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 13
+INPUTS | 16 | E<1>  | E<0>  | E<8>  | E<2>  | E<3>  | E<12>  | U2/etatP<0>  | E<7>  | U2/T<1>.LFBK  | $OpTx$BIN_STEP$721  | E<11>  | E<15>  | E<10>  | E<5>  | EXP8_.EXP  | U2/T<0>.LFBK
+INPUTMC | 5 | 1 | 9 | 3 | 9 | 0 | 1 | 3 | 11 | 3 | 10
+INPUTP | 11 | 10 | 9 | 29 | 11 | 12 | 50 | 27 | 46 | 61 | 49 | 15
+EXPORTS | 1 | 3 | 13
+IMPORTS | 1 | 3 | 11
+EQ | 27 | 
+       EXP9_.EXP  =  E<1> & E<0> & E<8> & E<2> & E<3> & E<12> & 
+	!U2/etatP<0> & E<7> & !$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK
+	# E<1> & E<0> & E<8> & E<2> & E<3> & E<12> & 
+	!U2/etatP<0> & E<7> & !$OpTx$BIN_STEP$721 & U2/T<1>.LFBK
+	# E<0> & E<8> & E<3> & E<12> & !U2/etatP<0> & 
+	E<11> & E<15> & E<7> & !$OpTx$BIN_STEP$721 & 
+	U2/T<1>.LFBK
+	# E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<15> & !$OpTx$BIN_STEP$721 & 
+	U2/T<1>.LFBK
+	# E<0> & E<8> & E<10> & E<5> & E<3> & 
+	!U2/etatP<0> & E<11> & E<15> & E<7> & !$OpTx$BIN_STEP$721 & 
+	U2/T<1>.LFBK
+;Imported pterms FB4_12
+	# E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<9> & E<15> & !$OpTx$BIN_STEP$721
+	# E<1> & E<0> & E<8> & E<2> & E<10> & E<5> & 
+	!U2/etatP<0> & E<11> & E<15> & !$OpTx$BIN_STEP$721 & 
+	!U2/T<0>.LFBK
+	# E<1> & E<0> & E<8> & E<2> & E<3> & E<12> & 
+	!U2/etatP<0> & E<11> & E<9> & E<7> & !$OpTx$BIN_STEP$721
+	# E<1> & E<0> & E<2> & E<10> & E<5> & E<13> & 
+	E<12> & !U2/etatP<0> & E<11> & E<14> & E<9> & E<15> & 
+	!$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK & !U2/T<1>.LFBK
+	# E<1> & E<0> & E<2> & E<10> & E<13> & E<3> & 
+	E<12> & !U2/etatP<0> & E<11> & E<14> & E<9> & E<15> & 
+	E<7> & !$OpTx$BIN_STEP$721 & !U2/T<0>.LFBK & !U2/T<1>.LFBK
+
+MACROCELL | 3 | 16 | EXP10_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 17
+INPUTS | 10 | E<1>  | E<2>  | E<10>  | E<5>  | E<3>  | E<11>  | E<15>  | E<7>  | U2/T<0>.LFBK  | U2/T<1>.LFBK
+INPUTMC | 2 | 3 | 10 | 3 | 9
+INPUTP | 8 | 10 | 11 | 49 | 15 | 12 | 46 | 61 | 27
+EXPORTS | 1 | 3 | 17
+EQ | 10 | 
+       EXP10_.EXP  =  E<1> & E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & !E<7> & U2/T<1>.LFBK
+	# E<1> & E<2> & E<10> & E<5> & E<3> & !E<11> & 
+	E<15> & E<7> & U2/T<1>.LFBK
+	# E<1> & E<2> & E<10> & E<5> & !E<3> & E<11> & 
+	E<15> & E<7> & U2/T<1>.LFBK
+	# E<1> & !E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & E<7> & !U2/T<0>.LFBK & U2/T<1>.LFBK
+	# !E<1> & E<2> & E<10> & E<5> & E<3> & E<11> & 
+	E<15> & E<7> & U2/T<0>.LFBK & U2/T<1>.LFBK
+
+PIN | E<4> | 64 | 0 | N/A | 13 | 13 | 3 | 2 | 0 | 16 | 1 | 5 | 3 | 14 | 0 | 14 | 1 | 6 | 0 | 2 | 0 | 17 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 13
+PIN | E<1> | 64 | 0 | N/A | 10 | 12 | 3 | 1 | 3 | 12 | 1 | 14 | 3 | 6 | 1 | 6 | 3 | 4 | 3 | 17 | 3 | 0 | 3 | 3 | 3 | 5 | 3 | 11 | 3 | 16
+PIN | E<0> | 64 | 0 | N/A | 9 | 11 | 3 | 2 | 3 | 12 | 0 | 16 | 3 | 14 | 0 | 3 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 13
+PIN | E<8> | 64 | 0 | N/A | 29 | 11 | 3 | 2 | 3 | 12 | 0 | 16 | 3 | 14 | 0 | 3 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 13
+PIN | E<2> | 64 | 0 | N/A | 11 | 12 | 3 | 1 | 3 | 12 | 1 | 14 | 0 | 1 | 3 | 6 | 3 | 17 | 0 | 17 | 3 | 0 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 16
+PIN | E<10> | 64 | 0 | N/A | 49 | 13 | 3 | 2 | 3 | 12 | 3 | 17 | 3 | 6 | 0 | 13 | 0 | 15 | 0 | 2 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 16
+PIN | E<5> | 64 | 0 | N/A | 15 | 13 | 3 | 2 | 3 | 12 | 3 | 17 | 3 | 6 | 0 | 10 | 0 | 15 | 0 | 2 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 16
+PIN | E<13> | 64 | 0 | N/A | 52 | 13 | 3 | 2 | 3 | 11 | 3 | 15 | 2 | 14 | 2 | 15 | 0 | 11 | 0 | 2 | 0 | 17 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 14
+PIN | E<3> | 64 | 0 | N/A | 12 | 11 | 3 | 1 | 3 | 12 | 1 | 14 | 0 | 0 | 3 | 6 | 3 | 17 | 3 | 0 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 16
+PIN | E<12> | 64 | 0 | N/A | 50 | 14 | 3 | 2 | 3 | 12 | 0 | 16 | 3 | 4 | 3 | 14 | 0 | 14 | 0 | 11 | 0 | 17 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 5 | 3 | 11 | 3 | 13
+PIN | R | 64 | 0 | N/A | 31 | 3 | 1 | 9 | 3 | 7 | 1 | 7
+PIN | H | 8192 | 0 | N/A | 21 | 17 | 1 | 9 | 3 | 7 | 1 | 7 | 3 | 5 | 3 | 2 | 1 | 8 | 3 | 10 | 3 | 9 | 3 | 8 | 1 | 2 | 1 | 10 | 1 | 13 | 1 | 17 | 1 | 12 | 1 | 11 | 1 | 16 | 1 | 15
+PIN | E<11> | 64 | 0 | N/A | 46 | 12 | 3 | 2 | 3 | 12 | 3 | 6 | 2 | 17 | 1 | 5 | 3 | 17 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 16
+PIN | E<6> | 64 | 0 | N/A | 26 | 11 | 3 | 2 | 0 | 1 | 0 | 12 | 2 | 14 | 2 | 16 | 3 | 15 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 14
+PIN | E<14> | 64 | 0 | N/A | 58 | 12 | 3 | 2 | 3 | 11 | 2 | 14 | 2 | 15 | 2 | 16 | 3 | 4 | 3 | 15 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 5 | 3 | 14
+PIN | E<9> | 64 | 0 | N/A | 38 | 11 | 3 | 2 | 3 | 11 | 3 | 15 | 2 | 14 | 0 | 2 | 0 | 17 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 14
+PIN | E<15> | 64 | 0 | N/A | 61 | 12 | 3 | 2 | 3 | 12 | 3 | 17 | 3 | 6 | 2 | 17 | 0 | 2 | 3 | 0 | 3 | 1 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 16
+PIN | E<7> | 64 | 0 | N/A | 27 | 14 | 3 | 1 | 3 | 12 | 1 | 14 | 3 | 17 | 0 | 12 | 3 | 6 | 0 | 8 | 0 | 9 | 0 | 3 | 3 | 0 | 3 | 3 | 3 | 4 | 3 | 11 | 3 | 16
+PIN | sortie | 536871040 | 0 | N/A | 71

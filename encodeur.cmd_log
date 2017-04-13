@@ -1,0 +1,1 @@
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn encodeur.xst -ofn encodeur.syr

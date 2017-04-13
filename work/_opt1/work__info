@@ -1,0 +1,182 @@
+m255
+13
+cModel Technology
+dH:\tp_numerique\projet_elec_numerique_1
+T_opt
+V3>zjlZ0zJa5f0aO]=Ib5P1
+04 8 6 work compteur compte 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2e;35
+T_opt1
+VV@;O0Fn3jz7?YVWMdn5<C1
+04 12 9 work telecommande structure 1
+o-quiet -auto_acc_if_foreign -work work -sdfmax /telecommande=netgen/fit/telecommande_timesim.sdf -suppress 1948
+tExplicit 1
+OE;O;6.2e;35
+T_opt2
+Vl;NaX^X8ZiaaEG[enIF6`1
+04 10 8 work sequenceur sequence 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2e;35
+Ecompteur
+w1260265446
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dH:\tp_numerique\projet_elec_numerique_1
+8vhdl.vhd
+Fvhdl.vhd
+l0
+L65
+Vg;@c=^?21z?^mLfViHPB13
+OE;C;6.2e;35
+31
+o-explicit -93
+tExplicit 1
+Acompte
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work compteur g;@c=^?21z?^mLfViHPB13
+l75
+L72
+V;5fzz4lGIWAUCSc;fl5h?3
+OE;C;6.2e;35
+31
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-explicit -93
+tExplicit 1
+Eencodeur
+w1260265446
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dH:\tp_numerique\projet_elec_numerique_1
+8vhdl.vhd
+Fvhdl.vhd
+l0
+L7
+V4VM5U2W]n=[K[@WRDf56R3
+OE;C;6.2e;35
+31
+o-explicit -93
+tExplicit 1
+Acodage
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work encodeur 4VM5U2W]n=[K[@WRDf56R3
+l16
+L15
+V]7DX@C5[`Q]721>i4RAl53
+OE;C;6.2e;35
+31
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-explicit -93
+tExplicit 1
+Esequenceur
+w1260265446
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dH:\tp_numerique\projet_elec_numerique_1
+8vhdl.vhd
+Fvhdl.vhd
+l0
+L104
+VVA0VH<I_K6aDLJKEPiEfl0
+OE;C;6.2e;35
+31
+o-explicit -93
+tExplicit 1
+Asequence
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work sequenceur VA0VH<I_K6aDLJKEPiEfl0
+l116
+L112
+Vc:FYnX41ebim>ckTeDNdY0
+OE;C;6.2e;35
+31
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-explicit -93
+tExplicit 1
+Etelecommande
+w1260269942
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP vital2000 vital_primitives P<o@__YgakiANKimF[boN3
+DP simprim vpackage `hL;9LE2oD<cC]35m9hl=0
+DP vital2000 vital_timing S^n>oJ2GS[H5aTKMo9OkE0
+DP simprim vcomponents 1Xn^BUHPebkO]n5kN00>^3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dH:\tp_numerique\projet_elec_numerique_1
+8netgen/fit/telecommande_timesim.vhd
+Fnetgen/fit/telecommande_timesim.vhd
+l0
+L41
+V<_FGnoNSDICB`8ZDl13ni3
+OE;C;6.2e;35
+31
+o-explicit -93
+tExplicit 1
+Astructure
+DE simprim x_roc 5ReVm7[BODQzinQE:Y89F1
+DE simprim x_inv <RY9FnJ1B^gBFzUobm7EP2
+DE simprim x_or5 Y5XLToBL_L^0`:[R>WUHK2
+DE simprim x_and8 W`eGP0nkeeSWSJQjo1`a72
+DE simprim x_and7 G5IScg^23YRKCUZROK?I80
+DE simprim x_or6 ]WzkH=?1D:D[Dg@_67kbn2
+DE simprim x_and6 SffeBVkfzFY0POhBi<_5;0
+DE simprim x_and5 GkS=H=Qz=YAXPYh=[caW52
+DE simprim x_or4 Xa5O2<YNXZUz;k^K@B`Kd3
+DE simprim x_and4 M;21NaMJaS2LRmkHH98oJ2
+DE simprim x_or3 @MH0bPnc;?4YOkbOkHH943
+DE simprim x_and16 d]`^YeOb_NJNa;U<V`=<03
+DE simprim x_or7 79[P=0`HMahUUhHXE23hP3
+DE simprim x_and3 Go?N=KBEaCAloJ7B0b<[40
+DE simprim x_and32 6PgM`@VIoKUj[8@WliMfL2
+DE simprim x_and2 3HWWGUdI^Vk>B1DJ=lzRA0
+DE simprim x_xor2 X:n1XkfI3oZL]SG6B>Bbz3
+DE simprim x_one nFR@M41E_MkKY0lVToDnI3
+DE simprim x_ff 6k9VHBDM56KeFWB7onm4@3
+DE simprim x_zero jDeJMz<aKDf[LU=1:V_Co0
+DE simprim x_or2 ^FoXoG<9Z=Rg?B>d]DUzk2
+DE simprim x_buf eP;?<^[nB]C]=bo6H^F^73
+DP std textio K]Z^fghZ6B=BjnK5NomDT3
+DP vital2000 vital_primitives P<o@__YgakiANKimF[boN3
+DP simprim vpackage `hL;9LE2oD<cC]35m9hl=0
+DP vital2000 vital_timing S^n>oJ2GS[H5aTKMo9OkE0
+DP simprim vcomponents 1Xn^BUHPebkO]n5kN00>^3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work telecommande <_FGnoNSDICB`8ZDl13ni3
+31
+M6 ieee std_logic_1164
+M5 simprim vcomponents
+M4 vital2000 vital_timing
+M3 std textio
+M2 simprim vpackage
+M1 vital2000 vital_primitives
+l448
+L50
+VRca0OL?VUzheG_GSHAQ@?1
+OE;C;6.2e;35
+o-explicit -93
+tExplicit 1

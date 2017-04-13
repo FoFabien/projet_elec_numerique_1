@@ -1,0 +1,46 @@
+Pin Freeze File:  version I.34
+
+957244 XC9572-7-PC44
+E<0> S:PIN43
+E<10> S:PIN19
+E<11> S:PIN18
+E<12> S:PIN20
+E<13> S:PIN22
+E<14> S:PIN24
+E<15> S:PIN25
+E<1> S:PIN44
+E<2> S:PIN1
+E<3> S:PIN2
+E<4> S:PIN3
+E<5> S:PIN4
+E<6> S:PIN8
+E<7> S:PIN9
+E<8> S:PIN11
+E<9> S:PIN14
+H S:PIN6
+R S:PIN12
+sortie S:PIN29
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_1 EXP0_ $OpTx$BIN_STEP$721 EXP1_ EXP2_
+		
+PARTITION FB1_9 $OpTx$$OpTx$FX_DC$60_INV$734 $OpTx$$OpTx$FX_DC$59_INV$733 $OpTx$$OpTx$FX_DC$58_INV$732 $OpTx$$OpTx$FX_DC$56_INV$730
+		 $OpTx$$OpTx$FX_DC$52_INV$728 $OpTx$$OpTx$FX_DC$49_INV$726 $OpTx$$OpTx$FX_DC$32_INV$725 $OpTx$$OpTx$FX_DC$31_INV$724
+		 $OpTx$FX_DC$75 EXP3_
+PARTITION FB2_1 EXP4_
+PARTITION FB2_3 U0/AUX<0> $OpTx$FX_SC$64 $OpTx$FX_SC$37 $OpTx$$OpTx$FX_DC$54_INV$729
+		 $OpTx$$OpTx$FX_DC$51_INV$727 U2/etatP<2> demi_T U2/etatP<0>
+		 U0/AUX<1> U0/AUX<5> U0/AUX<4> U0/AUX<2>
+		 $OpTx$FX_DC$74 U0/AUX<7> U0/AUX<6> U0/AUX<3>
+		
+PARTITION FB3_15 $OpTx$$OpTx$FX_DC$65_INV$735 $OpTx$$OpTx$FX_DC$57_INV$731 $OpTx$$OpTx$FX_DC$29_INV$723 $OpTx$$OpTx$FX_DC$27_INV$722
+		
+PARTITION FB4_1 EXP5_ EXP6_ U2/etatF_FFd3 EXP7_
+		 $OpTx$$OpTx$FX_DC$90_INV$736 U2/etatF_FFd2 $OpTx$FX_SC$82 U2/etatP<1>
+		 U2/etatF_FFd1 U2/T<1> U2/T<0> EXP8_
+		 EXP9_ sortie_OBUF $OpTx$FX_DC$95 $OpTx$FX_DC$93
+		 EXP10_ $OpTx$FX_DC$96
+

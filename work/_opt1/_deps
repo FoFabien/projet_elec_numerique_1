@@ -1,0 +1,58 @@
+H 2141964 10 5 0 26 26 0 0 0 0
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 7 simprim 29 C:/Xilinx/vhdl/mti_se/simprim
+L 3 std 18 $MODEL_TECH/../std
+L 9 vital2000 24 $MODEL_TECH/../vital2000
+L 4 work 4 work
+D 41 C:/Xilinx/vhdl/mti_se/simprim.vcomponents 1Xn^BUHPebkO]n5kN00>^3 2 1
+D 38 C:/Xilinx/vhdl/mti_se/simprim.vpackage WkPF>XY3<7ZSeKMn[hNJX3 1 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.vpackage(body) WkPF>XY3<7ZSeKMn[hNJX3 0 1
+D 48 C:/Xilinx/vhdl/mti_se/simprim.x_and16(x_and16_v) IOReIUSi1_7S`?lH8:K2`2 13 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_and2(x_and2_v) 9=WIz0]]`gJf]@^LZ]A9;2 9 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_and3(x_and3_v) 1l@PlCMj<8WbWXfzGlK4e3 11 1
+D 48 C:/Xilinx/vhdl/mti_se/simprim.x_and32(x_and32_v) CzZ_nlnQ^RUVk`RBceIgd1 10 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_and4(x_and4_v) mF9=IoT:P6l_63eeeM_GI0 15 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_and5(x_and5_v) ^i:<l0DQn>40mEn4SN`oM1 17 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_and6(x_and6_v) j@o]3LC2OCOQW<57zjIF@0 18 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_and7(x_and7_v) >bkBGZZEnQggNZWljh?493 20 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_and8(x_and8_v) lz64ekeQLKIO8bVEEz4OG3 21 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_buf(x_buf_v) jXP:;^PZ83o;Po2QC>J4O3 3 1
+D 42 C:/Xilinx/vhdl/mti_se/simprim.x_ff(x_ff_v) `mM1d:mXlZXJC?4aL]U9Y3 6 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_inv(x_inv_v) hFSRY0W8N@IW1gH^=2IVb0 23 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_one(x_one_v) 5AX>;8^EV8Tg:cH2<>@b43 7 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_or2(x_or2_v) `FD1Z<>VRRQ[VThZFRO>>2 4 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_or3(x_or3_v) L1b@LmR4MA_8[aGEDfY>E3 14 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_or4(x_or4_v) 38kYbV4Dkch40i7g:NCO?2 16 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_or5(x_or5_v) zkRfJBL6ID8kN5gYIR3B60 22 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_or6(x_or6_v) LaHRb>oFNYc:Mzb6WEjRz2 19 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_or7(x_or7_v) n7[o^h`OHR0Iz99]8c8dY2 12 1
+D 44 C:/Xilinx/vhdl/mti_se/simprim.x_roc(x_roc_v) eBRPbT4E=8na3<Y^TcRf<0 24 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_xor2(x_xor2_v) 1V:WFW3C5_OjWfXW<UK?J0 8 1
+D 46 C:/Xilinx/vhdl/mti_se/simprim.x_zero(x_zero_v) cW^4`RQYVd>K>YL;_^^Zl3 5 1
+D 28 work.telecommande(structure) Rca0OL?VUzheG_GSHAQ@?1 25 1
+2 0  0 WkPF>XY3<7ZSeKMn[hNJX3 0 0 1
+2 0  1 mdl57:O;HIh?nn>4k0jaO1 21 21 1
+2 0  1 oLcB:KB?P@oQ]7YRdK1=h3 22 22 1
+2 0  1 S6LQROmA>MKEg^=W@L3UB0 19 19 1
+2 0  1 eoz1;ZXoEA7YbPB0z_HVO1 20 20 1
+2 0  0 J@b;54>:O3P1:41IMA5R23 2 2 1
+2 0  0 TmL03Mo2RoTec[Xd2A78;0 7 7 1
+2 0  1 J<0WMhSi:<>MS@<>1?fQK3 8 8 1
+2 0  1 e8YHRT>XAgdh`cHel`SW21 14 14 1
+2 0  0 :W4L:a>mGF_ZN2E9:Tjo73 5 5 1
+2 0  1 i7;VmFI]aJmBaNIENG1?C3 6 6 1
+2 0  1 4OA4;J32a8>4JUYmgWkED3 15 15 1
+2 0  1 lCUKLHcaHUf0DaJ<DXU7g3 16 16 1
+2 0  1 lmbi8SkVT4[8LPc`R3SRo0 25 25 1
+2 0  1 Rkh=Ui=<4dW3Gd5bg:Bz[3 10 10 1
+2 0  1 Z^LcaeU<9OTf=8JS@hKW>2 11 11 1
+2 0  1 DiR>_00X`5gNUD1X[_CAd1 9 9 1
+2 0  1 g]kFcZKmVlnY@aaZIUC2D0 4 4 1
+2 0  1 J_77SN>`F41?aVG5f:G8P2 23 23 1
+2 0  0 9L`d>5ZaCi0:L9k=@6XTX0 24 24 1
+2 0  1 _ecX]I<ccYIH5<<Sg3N2C3 12 12 1
+2 0  1 BnPBMMDEQT>dO4hDlb0SY3 13 13 1
+2 0  0 o0`g0Bcic=9`EWn]KF1M71 1 1 1
+2 0  1 c2cl^`X:82V`OZ6Ia6dTg3 17 17 1
+2 0  1 fbcf5Dn=k6DWXjZb4INUh1 18 18 1
+2 0  1 XC:dBTfTY9@59_2d7ko^R2 3 3 1

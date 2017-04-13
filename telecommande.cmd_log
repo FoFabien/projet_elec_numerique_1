@@ -1,0 +1,20 @@
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn telecommande.xst -ofn telecommande.syr
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn telecommande.xst -ofn telecommande.syr
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn telecommande.xst -ofn telecommande.syr
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn telecommande.xst -ofn telecommande.syr
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn telecommande.xst -ofn telecommande.syr
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn telecommande.xst -ofn telecommande.syr
+ngdbuild -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -dd _ngo -uc "telecommande.ucf" -p xc9500 "telecommande.ngc" telecommande.ngd
+cpldfit -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk telecommande.ngd
+XSLTProcess -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" telecommande_build.xml
+tsim -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise telecommande telecommande.nga
+taengine -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -f telecommande -w --format html1 -l H:/tp_numerique/projet_elec_numerique_1/telecommande_html/tim/timing_report.htm
+netgen -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -rpw 100 -ar Structure -tm telecommande -w -dir netgen/fit -ofmt vhdl -sim telecommande.nga telecommande_timesim.vhd
+xst -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -ifn telecommande.xst -ofn telecommande.syr
+ngdbuild -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -dd _ngo -uc "telecommande.ucf" -p xc9500 "telecommande.ngc" telecommande.ngd
+cpldfit -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -p xc9572-7-PC44 -ofmt vhdl -optimize speed -htmlrpt -loc on -slew fast -init low -inputs 36 -pterms 25 -power std -localfbk -pinfbk telecommande.ngd
+XSLTProcess -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" telecommande_build.xml
+tsim -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise telecommande telecommande.nga
+taengine -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -f telecommande -w --format html1 -l H:/tp_numerique/projet_elec_numerique_1/telecommande_html/tim/timing_report.htm
+hprep6 -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -s IEEE1149 -n telecommande -i telecommande
+netgen -ise "H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise" -intstyle ise -rpw 100 -ar Structure -tm telecommande -w -dir netgen/fit -ofmt vhdl -sim telecommande.nga telecommande_timesim.vhd

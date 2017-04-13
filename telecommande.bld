@@ -1,0 +1,31 @@
+Release 8.2.03i ngdbuild I.34
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\bin\nt\ngdbuild.exe -ise
+H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise -intstyle
+ise -dd _ngo -uc telecommande.ucf -p xc9500 telecommande.ngc telecommande.ngd
+
+Reading NGO file 'H:/tp_numerique/projet_elec_numerique_1/telecommande.ngc' ...
+
+Applying constraints in "telecommande.ucf" to the design...
+
+Checking timing specifications ...
+Checking Partitions ...
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 65576 kilobytes
+
+Writing NGD file "telecommande.ngd" ...
+
+Writing NGDBUILD log file "telecommande.bld"...

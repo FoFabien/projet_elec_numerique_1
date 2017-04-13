@@ -1,0 +1,279 @@
+Release 8.2.03i - xst I.34
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 1.64 s | Elapsed : 0.00 / 2.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 1.66 s | Elapsed : 0.00 / 2.00 s
+ 
+--> Reading design: telecommande.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "telecommande.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "telecommande"
+Output Format                      : NGC
+Target Device                      : XC9500 CPLDs
+
+---- Source Options
+Top Module Name                    : telecommande
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Area
+Optimization Effort                : 1
+Keep Hierarchy                     : YES
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+
+---- Other Options
+lso                                : telecommande.lso
+verilog2001                        : YES
+safe_implementation                : No
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3215 - Unit work/telecommande is now defined in a different file: was H:/tp_numerique/projet_elec_numerique_1/telecommande.vhd, now is //narrhavas/fforest/tp_numerique/projet_elec_numerique_1/telecommande.vhd
+WARNING:HDLParsers:3215 - Unit work/telecommande/structure is now defined in a different file: was H:/tp_numerique/projet_elec_numerique_1/telecommande.vhd, now is //narrhavas/fforest/tp_numerique/projet_elec_numerique_1/telecommande.vhd
+Compiling vhdl file "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd" in Library work.
+Architecture codage of Entity encodeur is up to date.
+Architecture compte of Entity compteur is up to date.
+Architecture sequence of Entity sequenceur is up to date.
+Compiling vhdl file "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/telecommande.vhd" in Library work.
+Architecture structure of Entity telecommande is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <telecommande> in library <work> (architecture <structure>).
+
+Analyzing hierarchy for entity <compteur> in library <work> (architecture <compte>).
+
+Analyzing hierarchy for entity <encodeur> in library <work> (architecture <codage>).
+
+Analyzing hierarchy for entity <sequenceur> in library <work> (architecture <sequence>).
+
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <telecommande> in library <work> (Architecture <structure>).
+Entity <telecommande> analyzed. Unit <telecommande> generated.
+
+Analyzing Entity <compteur> in library <work> (Architecture <compte>).
+Entity <compteur> analyzed. Unit <compteur> generated.
+
+Analyzing Entity <encodeur> in library <work> (Architecture <codage>).
+Entity <encodeur> analyzed. Unit <encodeur> generated.
+
+Analyzing Entity <sequenceur> in library <work> (Architecture <sequence>).
+Entity <sequenceur> analyzed. Unit <sequenceur> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <compteur>.
+    Related source file is "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd".
+    Found 8-bit up counter for signal <AUX>.
+    Found 1-bit register for signal <sortie>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <compteur> synthesized.
+
+
+Synthesizing Unit <encodeur>.
+    Related source file is "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd".
+Unit <encodeur> synthesized.
+
+
+Synthesizing Unit <sequenceur>.
+    Related source file is "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/vhdl.vhd".
+    Found finite state machine <FSM_0> for signal <etatF>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 5                                              |
+    | Clock              | H (rising_edge)                                |
+    | Power Up State     | repos                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <$add0000> created at line 131.
+    Found 1-bit 4-to-1 multiplexer for signal <$mux0005> created at line 175.
+    Found 3-bit register for signal <etatP>.
+    Found 2-bit register for signal <T>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <sequenceur> synthesized.
+
+
+Synthesizing Unit <telecommande>.
+    Related source file is "//narrhavas/fforest/tp_numerique/projet_elec_numerique_1/telecommande.vhd".
+Unit <telecommande> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 2-bit adder                                           : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+# Multiplexers                                         : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <FSM_0> on signal <etatF[1:3]> with sequential encoding.
+---------------------
+ State   | Encoding
+---------------------
+ repos   | 000
+ start   | 001
+ stop    | 100
+ codage  | 010
+ codageb | 011
+---------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 2-bit adder                                           : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# Multiplexers                                         : 1
+ 1-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <telecommande> ...
+
+Optimizing unit <sequenceur> ...
+  implementation constraint: INIT=r	 : etatF_FFd3
+  implementation constraint: INIT=r	 : etatP_2
+  implementation constraint: INIT=r	 : T_1
+  implementation constraint: INIT=r	 : etatF_FFd1
+  implementation constraint: INIT=r	 : T_0
+  implementation constraint: INIT=r	 : etatP_0
+  implementation constraint: INIT=r	 : etatP_1
+  implementation constraint: INIT=r	 : etatF_FFd2
+
+Optimizing unit <encodeur> ...
+
+Optimizing unit <compteur> ...
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : telecommande.ngr
+Top Level Output File Name         : telecommande
+Output Format                      : NGC
+Optimization Goal                  : Area
+Keep Hierarchy                     : YES
+Target Technology                  : XC9500 CPLDs
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 218
+#      AND2                        : 77
+#      AND3                        : 25
+#      AND4                        : 5
+#      INV                         : 52
+#      OR2                         : 37
+#      OR3                         : 2
+#      XOR2                        : 20
+# FlipFlops/Latches                : 17
+#      FD                          : 14
+#      FDC                         : 3
+# IO Buffers                       : 19
+#      IBUF                        : 18
+#      OBUF                        : 1
+=========================================================================
+CPU : 8.70 / 10.38 s | Elapsed : 9.00 / 11.00 s
+ 
+--> 
+
+Total memory usage is 134436 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

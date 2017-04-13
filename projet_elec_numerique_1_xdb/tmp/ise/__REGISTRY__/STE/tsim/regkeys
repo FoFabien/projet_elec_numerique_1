@@ -1,0 +1,6 @@
+CommandLine
+C:\Xilinx\10.1\ISE\bin\nt\unwrapped\tsim.exe -ise H:/tp_numerique/projet_elec_numerique_1/projet_elec_numerique_1.ise -intstyle ise telecommande telecommande.nga
+s
+FormatString
+tsim <design[.vm6]> [--intstyle ise|xflow|silent] [<outfile>] 
+s

@@ -1,0 +1,154 @@
+m255
+13
+cModel Technology
+dH:\tp_numerique\projet_elec_numerique_1
+T_opt
+V3>zjlZ0zJa5f0aO]=Ib5P1
+04 8 6 work compteur compte 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2e;35
+T_opt1
+VznRS^djgccD=_ZYBm?I;i3
+04 12 9 work telecommande structure 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2e;35
+T_opt2
+Vl;NaX^X8ZiaaEG[enIF6`1
+04 10 8 work sequenceur sequence 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2e;35
+Ecompteur
+w1260258718
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dH:\tp_numerique\projet_elec_numerique_1
+8H:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+FH:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+l0
+L64
+VAX0S2UUHhGBLAB<5;kJXb2
+OE;C;6.2e;35
+32
+o-work work
+tExplicit 1
+Acompte
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work compteur AX0S2UUHhGBLAB<5;kJXb2
+l74
+L71
+VUASC2VgILNUlMn]`XkoSf2
+OE;C;6.2e;35
+32
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-work work
+tExplicit 1
+Eencodeur
+w1260258718
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dH:\tp_numerique\projet_elec_numerique_1
+8H:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+FH:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+l0
+L7
+V1bd7G[[K<Y>V8;QAlFSM32
+OE;C;6.2e;35
+32
+o-work work
+tExplicit 1
+Acodage
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work encodeur 1bd7G[[K<Y>V8;QAlFSM32
+l16
+L15
+VPf5c5@;<eKD@MLV1@XQD:1
+OE;C;6.2e;35
+32
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-work work
+tExplicit 1
+Esequenceur
+w1260258718
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+dH:\tp_numerique\projet_elec_numerique_1
+8H:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+FH:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+l0
+L103
+VQ9M6@z]`aA8X@l3ZAT_g31
+OE;C;6.2e;35
+o-work work
+tExplicit 1
+Asequence
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work sequenceur Q9M6@z]`aA8X@l3ZAT_g31
+32
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+l115
+L111
+V:`7d94aEoLM<cS;1D8Sja2
+OE;C;6.2e;35
+o-work work
+tExplicit 1
+Etelecommande
+w1260258718
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+dH:\tp_numerique\projet_elec_numerique_1
+8H:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+FH:/tp_numerique/projet_elec_numerique_1/vhdl.vhd
+l0
+L203
+V:cRzG1;VRMNnIN43zX2O21
+OE;C;6.2e;35
+32
+o-work work
+tExplicit 1
+Astructure
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work telecommande :cRzG1;VRMNnIN43zX2O21
+l238
+L211
+VF]nH1ohBaET[]gWIonDof1
+OE;C;6.2e;35
+32
+M4 ieee std_logic_1164
+M3 ieee numeric_std
+M2 ieee std_logic_unsigned
+M1 ieee std_logic_arith
+o-work work
+tExplicit 1
